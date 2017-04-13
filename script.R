@@ -14,4 +14,6 @@ bibpmidand <- lapply(strsplit(bibart[-1], "pmid ="), function(x) return(x[2])) %
 bibpmidbra <- lapply(strsplit(bibpmidand, ",\n"), function(x) return(x[1])) %>% unlist
 bibpmid <- bibpmidbra %>% sub("[{]", "", .) %>%  sub("[}]", "", .) %>% sub(" ", "", .)
 
+citationpageroot <- "https://www.ncbi.nlm.nih.gov/pubmed?LinkName=pubmed_pubmed_refs&from_uid=" #followed by pmid
+
 
